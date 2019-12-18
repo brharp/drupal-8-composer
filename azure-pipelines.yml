@@ -23,7 +23,9 @@ steps:
   displayName: 'composer install'
 
 - script: |
+    git config user.name  "${BUILD_REQUESTEDFOR}"
+    git config user.email "${BUILD_REQUESTEDFOREMAIL}"
     git add -A --force .
-    git commit --author="${BUILD_REQUESTEDFOR} <${BUILD_REQUESTEDFOREMAIL}>" -m "Build ${BUILD_BUILDID}"
+    git commit -m "Build ${BUILD_BUILDID}"
   displayName: 'Commit all the things'
 
