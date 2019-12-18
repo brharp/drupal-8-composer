@@ -22,3 +22,8 @@ steps:
 - script: composer install --no-interaction --prefer-dist
   displayName: 'composer install'
 
+- script: |
+    git add -A --force .
+    git commit --author="${BUILD_REQUESTEDFOR} <${BUILD_REQUESTEDFOREMAIL}>" -m "Build ${BUILD_BUILDID}"
+  displayName: 'Commit all the things'
+
