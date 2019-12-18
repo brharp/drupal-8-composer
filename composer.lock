@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cde680d673901377f7ea096335b836f9",
+    "content-hash": "ef83cfd9477bc334f18dcd02de70747d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1041,6 +1041,60 @@
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
             "time": "2019-12-04T08:44:18+00:00"
+        },
+        {
+            "name": "drupal/domain",
+            "version": "1.0.0-alpha16",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/domain.git",
+                "reference": "8.x-1.0-alpha16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/domain-8.x-1.0-alpha16.zip",
+                "reference": "8.x-1.0-alpha16",
+                "shasum": "d0088936af09e922ec873080d7960a1dc020bef8"
+            },
+            "require": {
+                "drupal/core": "^8.5"
+            },
+            "require-dev": {
+                "drupal/domain_access": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha16",
+                    "datestamp": "1561126081",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "agentrickard",
+                    "homepage": "https://www.drupal.org/user/20975"
+                },
+                {
+                    "name": "nonsie",
+                    "homepage": "https://www.drupal.org/user/29899"
+                }
+            ],
+            "description": "Creates domain records within a Drupal installation.",
+            "homepage": "https://www.drupal.org/project/domain",
+            "support": {
+                "source": "https://git.drupalcode.org/project/domain"
+            }
         },
         {
             "name": "easyrdf/easyrdf",
@@ -3588,12 +3642,11 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/domain": 15
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": [],
-    "platform-overrides": {
-        "php": "7.0.8"
-    }
+    "platform-dev": []
 }
