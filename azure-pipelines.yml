@@ -29,3 +29,6 @@ steps:
     git commit -m "Build ${BUILD_BUILDID}"
   displayName: 'Commit all the things'
 
+- script:
+    git push --force https://$(pat)@github.com/brharp/drupal-8-composer.git master
+  displayName: 'Push to Github'
