@@ -22,13 +22,13 @@ steps:
 - script: composer install --no-interaction --prefer-dist
   displayName: 'composer install'
 
-- script: |
-    git config user.name  "${BUILD_REQUESTEDFOR}"
-    git config user.email "${BUILD_REQUESTEDFOREMAIL}"
-    git add -A --force .
-    git commit -m "Build ${BUILD_BUILDID}"
-  displayName: 'Commit all the things'
+- task: ArchiveFiles@2
+  displayName: 'Archive $(Build.SourcesDirectory)'
+  inputs:
+    rootFolderOrFile: '$(Build.SourcesDirectory)'
+    includeRootFolder: false
 
-- script:
-    git push --force https://$(pat)@github.com/brharp/drupal-8-composer.git HEAD:master
-  displayName: 'Push to Github'
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)/$(Build.BuildId).zip'
