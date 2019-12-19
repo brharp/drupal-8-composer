@@ -22,13 +22,10 @@ steps:
 - script: composer install --no-interaction --prefer-dist
   displayName: 'composer install'
 
-- task: ArchiveFiles@2
-  displayName: 'Archive $(Build.SourcesDirectory)'
-  inputs:
-    rootFolderOrFile: '$(Build.SourcesDirectory)'
-    includeRootFolder: false
-
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: drop'
-  inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)/$(Build.BuildId).zip'
+- script: |
+    git config user.name '$(Build.RequestedFor)'
+    git config user.email '$(Build.RequestedForEmail)'
+    git add --force -A .
+    git commit -m 'Build $(Build.BuildId)'
+    git push origin master
+  displayName: 'push to master'
