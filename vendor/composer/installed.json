@@ -1117,6 +1117,107 @@
         }
     },
     {
+        "name": "drupal/domain_access",
+        "version": "1.0.0-alpha16",
+        "version_normalized": "1.0.0.0-alpha16",
+        "require": {
+            "drupal/core": "*",
+            "drupal/domain": "self.version"
+        },
+        "type": "metapackage",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.0-alpha16",
+                "datestamp": "1561126081",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Alpha releases are not covered by Drupal security advisories."
+                }
+            }
+        },
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "agentrickard",
+                "homepage": "https://www.drupal.org/user/20975"
+            },
+            {
+                "name": "nonsie",
+                "homepage": "https://www.drupal.org/user/29899"
+            }
+        ],
+        "description": "Domain-based access control for content.",
+        "homepage": "https://www.drupal.org/project/domain",
+        "support": {
+            "source": "https://git.drupalcode.org/project/domain"
+        }
+    },
+    {
+        "name": "drupal/domain_menu_access",
+        "version": "1.0.0-alpha2",
+        "version_normalized": "1.0.0.0-alpha2",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/domain_menu_access.git",
+            "reference": "8.x-1.0-alpha2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/domain_menu_access-8.x-1.0-alpha2.zip",
+            "reference": "8.x-1.0-alpha2",
+            "shasum": "9382513e0cd172844923686a0bb9f2324ba11709"
+        },
+        "require": {
+            "drupal/core": "~8.0",
+            "drupal/domain": "*",
+            "drupal/domain_access": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.0-alpha2",
+                "datestamp": "1519214884",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Alpha releases are not covered by Drupal security advisories."
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Sebastien @Actualys",
+                "homepage": "https://www.drupal.org/user/380104"
+            },
+            {
+                "name": "maciej.zgadzaj",
+                "homepage": "https://www.drupal.org/user/271491"
+            },
+            {
+                "name": "pifagor",
+                "homepage": "https://www.drupal.org/user/2375692"
+            }
+        ],
+        "description": "Domain-based access control for menu link.",
+        "homepage": "https://www.drupal.org/project/domain_menu_access",
+        "support": {
+            "source": "https://git.drupalcode.org/project/domain_menu_access"
+        }
+    },
+    {
         "name": "easyrdf/easyrdf",
         "version": "0.9.1",
         "version_normalized": "0.9.1.0",
