@@ -27,5 +27,5 @@ steps:
     git config user.email '$(Build.RequestedForEmail)'
     git add --force -A .
     git commit -m 'Build $(Build.BuildId)'
-    git push --force origin HEAD:master
+    git push --force https://$(pat)@github.com/brharp/drupal-8-composer.git HEAD:master
   displayName: 'push to master'
