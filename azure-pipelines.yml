@@ -27,5 +27,5 @@ steps:
     git config user.email '$(Build.RequestedForEmail)'
     git add --force -A .
     git commit -m 'Build $(Build.BuildId)'
-    git push origin master
+    git push --force origin HEAD:master
   displayName: 'push to master'
